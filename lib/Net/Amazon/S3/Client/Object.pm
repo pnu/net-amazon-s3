@@ -618,5 +618,4 @@ C<user_metadata>.
 To upload an object with user metadata, set C<user_metadata> at construction
 time to a hashref, with no C<x-amz-meta-> prefixes on the key names.  When
 downloading an object, the C<get>, C<get_decoded> and C<get_filename>
-ethods set the contents of C<user_metadata> to the same format.
-
+methods set the contents of C<user_metadata> to the same format.
