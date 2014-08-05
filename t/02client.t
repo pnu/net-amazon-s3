@@ -33,8 +33,8 @@ my $client = Net::Amazon::S3::Client->new( s3 => $s3 );
 
 my @buckets = $client->buckets;
 
-TODO: {
-    local $TODO = "These tests only work if you're pedro";
+SKIP: {
+    skip "These tests only work if you're pedro", 3 unless ($ENV{'I_AM_PEDRO'});
     my $first_bucket = $buckets[0];
     like( $first_bucket->owner_id, qr/^c7483d612ac7f0c0/, 'have owner id' );
     is( $first_bucket->owner_display_name, 'pedro_figueiredo', 'have display name' );
